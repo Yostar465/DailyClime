@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <title>Daily Clime</title>
+  </head>
+  <body class="transition-body">
+    <img
+      class="transition-logo"
+      src="{{ url_for('static', filename='image/logo.png') }}"
+    />
+    <a href="/index">
+      <button class="transition-button" id="transition-button">Start</button>
+    </a>
+    <!-- <button class="transition-button" id="transition-button">Start</button> -->
+    <script>
+      document
+        .getElementById("transition-button")
+        .addEventListener("click", function () {
+          document.body.classList.add("page-transition");
+
+          setTimeout(function () {
+            window.location.href = "/index";
+          }, 980);
+        });
+    </script>
+  </body>
+</html>

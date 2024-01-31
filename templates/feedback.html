@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="d-flex justify-content-center align-item-center">
+  <div class="row row-cols-1">
+    <div class="col">
+      <div class="feedback-title">Feedback Sentiment Analysis</div>
+    </div>
+  </div>
+  <br />
+</div>
+<form method="post" action="/sentimen" class="form-feedback">
+  <label for="feedback">Masukkan Feedback :</label>
+  <textarea name="feedback" rows="4" cols="50" required></textarea>
+  <br />
+  <button type="submit">Kirim</button>
+</form>
+{% if user_input %}
+<div class="result-container">
+  <div class="inputan">
+    <p>Kalimat feedback Anda : <span id="user-input">{{ user_input }}</span></p>
+  </div>
+  <div class="hasil">
+    <p>
+      Kalimat Anda adalah feedback :
+      <span id="sentiment-result">{{ sentiment_result }}</span>
+    </p>
+  </div>
+</div>
+<div class="bar-chart">
+  <div class="bar positif" style="width: {{ positive_percentage }}%">
+    Positif
+  </div>
+  <div class="bar negatif" style="width: {{ negative_percentage }}%">
+    Negatif
+  </div>
+</div>
+{% endif %} {% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <label for="cityInput">Enter City: </label>
+    <input type="text" id="cityInput" placeholder="Enter city name" />
+    <button onclick="getWeather()">Get Weather</button>
+
+    <div id="weatherResult"></div>
+
+    <script>
+      async function getWeather() {
+        var city = document.getElementById("cityInput").value;
+
+        try {
+          var response = await fetch(
+            `https://yougo465.pythonanywhere.com/weather/${city}`
+          );
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+
+          var data = await response.json();
+          console.log(data);
+          displayWeather(data);
+        } catch (error) {
+          console.error("Error getting weather data:", error);
+          document.getElementById("weatherResult").innerHTML =
+            "<p>Error getting weather data. Please try again.</p>";
+        }
+      }
+      8;
+    </script>
+  </body>
+</html>

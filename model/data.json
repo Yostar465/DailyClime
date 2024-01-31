@@ -1,0 +1,38 @@
+{"intents": [
+      {"tag": "sapaan",
+        "patterns": ["Hallo","Hai","Halo","Hello","Helo","Selamat pagi","Selamat siang","Selamat sore","Selamat malam"],
+        "responses": ["Halo! Ada yang bisa saya bantu?"],
+        "context": [""]
+      },
+      {"tag": "ertanyaanrekomendasikegiatanhujan",
+        "patterns": ["Ada rekomendasi untuk kegiatan saat hujan?","Apa yang bisa saya lakukan di luar hari ini?","Cuaca hujan, ada saran untuk kegiatan didalam ruangan?","Kegiatan apa yang cocok untuk cuaca hujan?"],
+        "responses": ["Saat cuaca hujan sebaiknya melakukan aktivitas dalam ruangan seperti memasak, membuat kopi atau teh untuk menghangatkan badan, membaca novel. Hindari aktivitas diluar ruangan. Jika mendesak, pastikan memakai jas hujan atau payung. Pastikan rumah Anda terbebas dari kebocoran. Selamat menikmati hari Anda!"],
+        "context": [""]
+      },
+      {"tag": "pertanyaanrekomendasikegiatancerah",
+        "patterns": ["Ada rekomendasi untuk kegiatan saat cuaca cerah?","Apa yang bisa saya lakukan di luar hari ini?","Cuaca cerah, ada saran untuk kegiatan diluar ruangan?","Kegiatan apa yang cocok untuk cuaca cerah?"],
+        "responses": ["Cuaca cerah bagus untuk kegiatan diluar ruangan dan didalam ruangan. Kegiatan diluar ruangan seperti berjemur dipantai, bermain golf, mendaki atau berpiknik. Kegiatan didalam ruangan seperti belajar, membaca buku atau majalah, menonton film atau tv, bermain game, mendengarkan musik atau podcast. Jangan lupa minum yang cukup agar selalu terhidrasi dan jika Anda ingin keluar luar ruangan, jangan lupa gunakan sunscreen. Nikmati hari Anda!"],
+        "context": [""]
+      },
+      {"tag": "pertanyaanrekomendasikegiatanberawan",
+        "patterns": ["Ada rekomendasi untuk kegiatan saat berawan?","Apa yang bisa saya lakukan di luar hari ini?","Cuaca berawan, ada saran untuk kegiatan diluar ruangan?","Kegiatan apa yang cocok untuk cuaca berawan?"],
+        "responses": ["Cuaca hari ini sangat bagus untuk kegiatan diluar ruangan seperti berjalan di taman, pergi ke mall, membaca buku di cafe atau sekedar bersantai. Sedangkan kegiatan didalam ruangan seperti belajar, membaca buku atau majalah, menonton film atau tv, bermain game, mendengarkan musik atau podcast. Apabila Anda akan beraktivitas diluar rungan, siapkan payung jika perlu untuk berjaga-jaga apabila hujan datang. Nikmati hari Anda!"],
+        "context": [""]
+      },
+      {"tag": "pertanyaanrekomendasikegiatansunrise",
+        "patterns": ["Ada rekomendasi untuk kegiatan saat sunrise?","Apa yang bisa saya lakukan di luar hari ini?","Cuaca sunrise, ada saran untuk kegiatan outdoor?"],
+        "responses": ["Cuaca hari ini sangat bagus untuk kegiatan outdoor seperti pergi ke pantai menikmati udara dan langit, berlari, bersepeda, berkebun, piknik. Kegiatan didalam ruangan seperti belajar, membaca buku atau majalah, menonton film atau tv, menulis, menyusun rencana atau tujuan, memasak, mendengarkan musik atau podcast Nikmati hari Anda!"],
+        "context": [""]
+      },
+      {"tag": "terimaKasih",
+        "patterns": ["Terima kasih","Makasih","Thanks","Thank you","Trims"],
+        "responses": ["Sama-sama! Jangan ragu untuk bertanya jika ada yang perlu kamu ketahui."],
+        "context": [""]
+      },
+      {"tag": "default",
+        "patterns": ["Tidak tahu","Saya tidak mengerti","Apa itu?","Boleh dijelaskan lagi?"],
+        "responses": ["Maaf, saya tidak mengerti pertanyaan Anda. Bisakah Anda memberikan informasi lebih detail?"],
+        "context": [""]
+      }
+  ]
+}

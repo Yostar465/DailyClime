@@ -1,0 +1,76 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="d-flex justify-content-center align-item-center">
+  <div class="row row-cols-1">
+    <div class="col feature-title">Image Classifier</div>
+  </div>
+</div>
+<div class="d-flex justify-content-center align-item-center">
+  <div class="row row-cols-1">
+    <div class="col">
+      <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label"> Choose... </label>
+        <input
+          type="file"
+          name="file"
+          id="imageUpload"
+          accept=".png, .jpg, .jpeg"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center align-item-center">
+  <div class="row row-cols-1 justify-content-center">
+    <div class="col">
+      <div class="image-section justify-content-center" style="display: none">
+        <div class="img-preview">
+          <div id="imagePreview"></div>
+        </div>
+        <div class="d-flex justify-content-center align-item-center">
+          <div class="row row-cols-1">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              id="btn-predict"
+            >
+              Predict!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center align-item-center">
+  <div class="row row-cols-1">
+    <div class="col justify-content-center">
+      <div class="loader" style="display: none"></div>
+
+      <h3 id="result">
+        <span> </span>
+      </h3>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="modal" id="cameraModal" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title">Simple Bootstrap Modal</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <video id="cameraPreview" autoplay playsinline></video>
+        <button id="capturePhoto">Capture Photo</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "base.html" %} {% block content %}
+<div class="container home-title">
+  <div class="row row-cols-2 justify-content-left g-0">
+    <div class="col-md-auto home-title-1">Find your</div>
+    <div class="col-md-auto home-title-2">Activity</div>
+  </div>
+</div>
+
+<div class="containe list-menu">
+  <div class="row row-cols-4 justify-content-center">
+    <div id="Popular" class="col-md-auto home-menu-active">
+      <a class="menu-link" href="#">Popular</a>
+    </div>
+    <div id="Rain" class="col-md-auto home-menu">
+      <a class="menu-link" href="#">Rain</a>
+    </div>
+    <div id="Sunny" class="col-md-auto home-menu">
+      <a class="menu-link" href="#">Sunny</a>
+    </div>
+    <div id="Cloudy" class="col-md-auto home-menu">
+      <a class="menu-link" href="#">Cloudy</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row-cols-3 justify-content-right">
+    <div class="col justify-content-center">
+      <div
+        class="card card-sm mb-3 about-eachcard justify-content-center"
+        style="max-width: 410px; max-height: 300px"
+      >
+        <div class="row g-0">
+          <img
+            src="{{ url_for('static', filename='image/swimming.jpg') }}"
+            class="img-fluid"
+            alt="..."
+            style="
+              max-height: 200px;
+              object-fit: cover;
+              border-top-left-radius: 21px;
+              border-top-right-radius: 21px;
+            "
+          />
+        </div>
+        <div class="row g-0">
+          <div class="card-body">
+            <div class="card-title about-article-title">Swimming</div>
+            <a class="about-redirect" href="#">Selengkapnya...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col justify-content-center">
+      <div
+        class="card card-sm mb-3 about-eachcard justify-content-center"
+        style="max-width: 410px; max-height: 300px"
+      >
+        <div class="row g-0">
+          <img
+            src="{{ url_for('static', filename='image/playing-tennis.jpg') }}"
+            class="img-fluid"
+            alt="..."
+            style="
+              max-height: 200px;
+              object-fit: cover;
+              border-top-left-radius: 21px;
+              border-top-right-radius: 21px;
+            "
+          />
+        </div>
+        <div class="row g-0">
+          <div class="card-body">
+            <div class="card-title about-article-title">Playing Tennis</div>
+            <a class="about-redirect" href="#">Selengkapnya...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
